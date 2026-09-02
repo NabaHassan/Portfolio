@@ -787,6 +787,94 @@ a {
     padding-top: 0.25rem;
 }
 
+/* Automation (n8n) */
+.automation {
+    background:
+        linear-gradient(180deg, rgba(11, 122, 120, 0.06) 0%, transparent 55%),
+        var(--bg-elevated);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.automation-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.automation-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.15rem 1.25rem;
+    background: var(--bg);
+}
+
+.automation-stat-value {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.automation-stat-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    color: var(--text-muted);
+}
+
+.automation .project-list {
+    border-top: 1px solid var(--line);
+}
+
+.automation .project-row {
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+}
+
+.automation .project-row:hover {
+    background: rgba(11, 122, 120, 0.06);
+}
+
+.automation .project-row--static:hover {
+    background: transparent;
+}
+
+.automation .project-id {
+    color: var(--text-muted);
+}
+
+.automation .project-main h3 {
+    color: var(--bg-ink);
+}
+
+.automation .project-main p {
+    color: var(--text-muted);
+}
+
+.automation .project-tags {
+    color: var(--accent);
+}
+
+.automation .project-arrow {
+    color: var(--text-muted);
+}
+
+.automation .project-row:hover .project-arrow {
+    color: var(--accent);
+}
+
+.automation .project-row--static:hover .project-arrow {
+    color: var(--text-muted);
+}
+
 /* Projects as interactive list (not floating cards) */
 .projects {
     background:
@@ -1172,7 +1260,8 @@ a {
     .about-grid,
     .exp-layout,
     .skills-matrix,
-    .cert-grid {
+    .cert-grid,
+    .automation-stats {
         grid-template-columns: 1fr;
     }
 
